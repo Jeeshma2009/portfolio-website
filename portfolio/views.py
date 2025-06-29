@@ -10,7 +10,6 @@ import os
 def index(request):
     profile = Profile.objects.first()
     projects = Project.objects.all()
-    print("---------------",profile)
     return render(request, 'portfolio/index.html', {
         'profile': profile,
         'projects': projects
