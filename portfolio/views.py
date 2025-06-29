@@ -36,7 +36,7 @@ def view_resume(request):
         return FileResponse(profile.resume.open('rb'), content_type='application/pdf')
 
     # Fallback: serve default resume from static folder
-    default_path = os.path.join(settings.BASE_DIR, 'static', 'portfolio', 'files', 'default_resume.pdf')
+    default_path = os.path.join(settings.BASE_DIR, 'portfolio', 'static', 'portfolio', 'files', 'default-resume.pdf')
     if os.path.exists(default_path):
         return FileResponse(open(default_path, 'rb'), content_type='application/pdf')
 
