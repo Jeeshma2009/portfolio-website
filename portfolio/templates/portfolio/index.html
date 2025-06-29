@@ -1,14 +1,18 @@
 {% extends "portfolio/base.html" %}
-
+{% load static %}
 {% block title %}Jeeshma Gopinath – Portfolio{% endblock %}
 
 {% block content %}
 <div class="container text-center mt-5">
   <div class="intro-section mx-auto">
     {% if profile.photo %}
-      <img src="{{ profile.photo.url }}" alt="{{ profile.name }}"
-           class="profile-img mb-4 rounded-circle shadow-sm animated zoom-in delay-1">
-    {% endif %}
+  <img src="{{ profile.photo.url }}" alt="{{ profile.name }}"
+       class="profile-img mb-4 rounded-circle shadow-sm animated zoom-in delay-1">
+{% else %}
+  <img src="{% static 'portfolio/images/default-profile.jpg' %}" alt="Default profile"
+       class="profile-img mb-4 rounded-circle shadow-sm animated zoom-in delay-1">
+{% endif %}
+
 
     <h1 class="fw-bold mb-2 animated fade-in-up delay-2">{{ profile.name }}</h1>
     <h4 class="text-muted mb-3 animated fade-in-up delay-3">Software Engineer | Python & Django Specialist</h4>
@@ -30,11 +34,13 @@
       <a href="/projects/" class="btn btn-primary btn-lg me-3 mb-2">🚀 View Projects</a>
 
       {% if profile.resume %}
-        <a href="{{ profile.resume.url }}" class="btn btn-secondary btn-lg mb-2" download>📄 Download Resume</a>
-        <a href="{{ profile.resume.url }}" class="btn btn-outline-primary btn-lg mb-2" target="_blank" rel="noopener">📄 View Resume</a>
-      {% else %}
-        <p class="text-muted w-100">Resume not available yet.</p>
-      {% endif %}
+  <a href="{{ profile.resume.url }}" class="btn btn-secondary btn-lg mb-2" download>📄 Download Resume</a>
+  <a href="{{ profile.resume.url }}" class="btn btn-outline-primary btn-lg mb-2" target="_blank" rel="noopener">📄 View Resume</a>
+{% else %}
+  <a href="{% static 'portfolio/files/default-resume.pdf' %}" class="btn btn-secondary btn-lg mb-2" download>📄 Download Resume</a>
+  <a href="{% static 'portfolio/files/default-resume.pdf' %}" class="btn btn-outline-primary btn-lg mb-2" target="_blank" rel="noopener">📄 View Resume</a>
+{% endif %}
+
 
       <a href="https://www.linkedin.com/in/jeeshma-gopinath/" target="_blank" rel="noopener"
          class="btn btn-info btn-lg btn-custom text-white d-flex align-items-center justify-content-center mb-2">
