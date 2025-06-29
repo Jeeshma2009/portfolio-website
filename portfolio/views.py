@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from .models import Project, Profile
 from django.http import FileResponse, Http404
-import os
+from django.contrib.auth import get_user_model
+from django.http import HttpResponse
+from decouple import config
 
 def index(request):
     profile = Profile.objects.first()
@@ -34,3 +36,11 @@ def view_resume(request):
 def skills_certificates(request):
     profile = Profile.objects.first()
     return render(request, 'portfolio/skills.html', {'profile': profile})
+
+def create_admin_user(request):
+    User = get_user_model()
+    if not User.objects.filter(username='admin').exists():
+        User.objects.create_superuser('admin', config('EMAIL'), config('PASSWORD'))
+        return HttpResponse("Superuser created successfully.")
+    else:
+        return HttpResponse("Superuser already exists.")

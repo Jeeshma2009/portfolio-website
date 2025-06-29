@@ -10,4 +10,5 @@ urlpatterns = [
     path('api/projects/', ProjectAPIView.as_view()),
     path('resume/', views.view_resume, name='resume'),
     path('skills/', views.skills_certificates, name='skills'),
+    path('create-admin/', views.create_admin_user),  # ⚠️ Temporary!
 ]
