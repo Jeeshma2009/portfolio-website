@@ -33,7 +33,7 @@ This is my personal portfolio website built using **Django** and **Django REST F
 
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/skillportfolio.git
+git clone https://github.com/Jeeshma2009/portfolio-website.git
 cd skillportfolio
 
 # Create and activate virtual environment
