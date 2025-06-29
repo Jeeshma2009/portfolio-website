@@ -1,0 +1,46 @@
+{% extends "portfolio/base.html" %}
+
+{% block title %}Jeeshma Gopinath – Portfolio{% endblock %}
+
+{% block content %}
+<div class="container text-center mt-5">
+  <div class="intro-section mx-auto">
+    {% if profile.photo %}
+      <img src="{{ profile.photo.url }}" alt="{{ profile.name }}"
+           class="profile-img mb-4 rounded-circle shadow-sm animated zoom-in delay-1">
+    {% endif %}
+
+    <h1 class="fw-bold mb-2 animated fade-in-up delay-2">{{ profile.name }}</h1>
+    <h4 class="text-muted mb-3 animated fade-in-up delay-3">Software Engineer | Python & Django Specialist</h4>
+
+    <p class="intro-text text-justify animated fade-in-up delay-4">
+      I build scalable, maintainable backend systems using Python and Django with 4+ years of experience.
+      Passionate about clean code, problem solving, and delivering solutions that make a difference.
+      Currently expanding my skill set by learning digital marketing, including SEO, Google tools, and social media strategies.
+    </p>
+
+    <ul class="skills-list mb-4 text-start d-inline-block animated fade-in-up delay-4">
+      <li><i class="bi bi-code-slash me-2 text-primary"></i>Expert in Python, Django, and REST API development</li>
+      <li><i class="bi bi-bug-fill me-2 text-danger"></i>Strong problem-solving and debugging skills</li>
+      <li><i class="bi bi-people-fill me-2 text-success"></i>Experience leading projects and collaborating in teams</li>
+      <li><i class="bi bi-lightbulb-fill me-2 text-warning"></i>Continuous learner staying updated with latest technologies</li>
+    </ul>
+
+    <div class="d-flex justify-content-center flex-wrap gap-3 animated fade-in-up delay-4">
+      <a href="/projects/" class="btn btn-primary btn-lg me-3 mb-2">🚀 View Projects</a>
+
+      {% if profile.resume %}
+        <a href="{{ profile.resume.url }}" class="btn btn-secondary btn-lg mb-2" download>📄 Download Resume</a>
+        <a href="{{ profile.resume.url }}" class="btn btn-outline-primary btn-lg mb-2" target="_blank" rel="noopener">📄 View Resume</a>
+      {% else %}
+        <p class="text-muted w-100">Resume not available yet.</p>
+      {% endif %}
+
+      <a href="https://www.linkedin.com/in/jeeshma-gopinath/" target="_blank" rel="noopener"
+         class="btn btn-info btn-lg btn-custom text-white d-flex align-items-center justify-content-center mb-2">
+        <i class="bi bi-linkedin me-2"></i>LinkedIn
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}

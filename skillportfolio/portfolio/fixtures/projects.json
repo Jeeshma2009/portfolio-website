@@ -1,0 +1,54 @@
+[
+  {
+    "model": "portfolio.project",
+    "pk": 1,
+    "fields": {
+      "title": "DevDiscovery",
+      "domain": "Knowledge Management and Discovery",
+      "tech_stack": "Django ORM, Django REST Framework (DRF), AWS (Boto3), Docker",
+      "description": "A one-stop knowledge discovery platform designed for development professionals to efficiently find relevant data and information.",
+      "key_contributions": "Developed a scalable chat feature by integrating client-side AI models and third-party APIs for intelligent query processing, reducing response time by 40%.\nDesigned and implemented advanced text and document search functionalities with text extraction capabilities, improving data retrieval accuracy by 30%.\nBuilt and maintained secure document upload and download functionality using AWS S3 (Boto3) for efficient and safe data storage, reducing document retrieval time by 25%.\nDeveloped an export feature to convert search results into preformatted Excel sheets, streamlining reporting and reducing manual effort by 50%.\nUtilized Django ORM, Django Rest Framework (DRF), and Docker to build a robust, scalable backend architecture, improving application stability and performance.",
+      "role": "Backend Developer",
+      "team_size": 10
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 2,
+    "fields": {
+      "title": "InShare",
+      "domain": "Insurance and Logistics",
+      "tech_stack": "Django REST Framework (DRF), PostgreSQL, AWS",
+      "description": "A project developed for Amazon to manage fleet data for insurance purposes, involving complex relationships between enterprises, fleets, and drivers. Supports multiple user roles, including Enterprise, Fleet, and Driver, with bulk asset and driver data import functionality.",
+      "key_contributions": "Developed a robust system for importing bulk asset and driver data from CSV files, reducing data entry time by 35% and improving data accuracy by 20%.\nDesigned and implemented solutions to manage complex relationships (enterprise-to-fleet, fleet-to-driver, etc.), ensuring data integrity and consistency.\nEnabled enterprises to upload fleet details via Excel, automating data mapping and processing, reducing manual data entry errors by 15%.\nManaged complex fleet-to-driver, enterprise-to-fleet, and asset-to-fleet mapping operations, including creating, unmapping, and reactivating entries, improving mapping accuracy by 25%.\nBuilt secure document upload and download functionality using AWS S3, ensuring safe and efficient storage of fleet-related documents and improving access speed by 30%.",
+      "role": "Backend Lead",
+      "team_size": 3
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 3,
+    "fields": {
+      "title": "SmartCrop Insurance",
+      "domain": "Agriculture and Insurance",
+      "tech_stack": "Django ORM, Django REST Framework (DRF), PostgreSQL, Pandas, NumPy, JWT",
+      "description": "A state-level initiative in Kerala to automate insurance payouts for farmers based on daily weather data, eliminating the need for users to apply for insurance for their cultivation.",
+      "key_contributions": "Led backend development to ensure seamless integration with frontend teams, enhancing system functionality and improving user experience by 30%.\nIntegrated external weather hardware for data collection and synchronized the data using Django cron jobs for daily updates, increasing data accuracy by 20%.\nDesigned a scalable JSON-based rule engine for calculating insurance payouts based on crop, season, and weather parameters, leveraging Pandas and NumPy for data manipulation and complex calculations, reducing processing time by 25%.\nAutomated payout calculations and email notifications, reducing manual processing time by 30%, increasing operational efficiency, and ensuring timely payouts for farmers.\nDeveloped the backend using Django ORM, DRF, JWT authentication, and integrated email notifications, ensuring secure and reliable payout alerts.\nStreamlined user registration and payout notification processes, ensuring a user-friendly experience for farmers, improving user satisfaction by 15%.",
+      "role": "Backend API Developer",
+      "team_size": 2
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 4,
+    "fields": {
+      "title": "SOAP Wrapper",
+      "domain": "Integration and Web Development",
+      "tech_stack": "Django REST Framework (DRF), SQLite, JavaScript, AJAX, CSS, HTML, jQuery",
+      "description": "A web application that calls SOAP APIs from a Django Rest application, converts the SOAP response to JSON, and sends the JSON response to the end user.",
+      "key_contributions": "Designed and developed a solution for integrating SOAP APIs with a Django Rest framework for efficient data exchange, improving API communication speed by 25%.\nImplemented functionality to convert SOAP responses into JSON format, streamlining data exchange and improving system efficiency by 30%.\nDelivered the solution within the set timeline, ensuring a high-quality, functional integration.\nDeveloped a dynamic web application using Django Rest Framework (DRF) for API handling, SQLite for lightweight database management, and a rich front-end with JavaScript, AJAX, CSS, HTML, and jQuery for interactive user experience, reducing page load time by 30%.",
+      "role": "Backend API Developer",
+      "team_size": 2
+    }
+  }
+]

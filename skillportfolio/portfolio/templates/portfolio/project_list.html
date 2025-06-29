@@ -1,0 +1,33 @@
+{% extends "portfolio/base.html" %}
+
+{% block title %}Skills & Certificates – Jeeshma Gopinath{% endblock %}
+
+{% block content %}
+  <div class="container my-5">
+    <h1 class="mb-4 text-center">Project Portfolio</h1>
+
+    {% for project in projects %}
+      <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+          <h4 class="card-title">{{ project.title }} ({{ project.domain }})</h4>
+          <p><strong>Technology Used:</strong> {{ project.tech_stack }}</p>
+
+          <p><strong>Description:</strong></p>
+          <p>{{ project.description }}</p>
+
+          <p><strong>Key Contributions:</strong></p>
+          <ul>
+            {% for line in project.key_contributions.splitlines %}
+              <li>{{ line }}</li>
+            {% endfor %}
+          </ul>
+
+          <p><strong>Role:</strong> {{ project.role }}</p>
+          <p><strong>Team Size:</strong> {{ project.team_size }}</p>
+        </div>
+      </div>
+    {% empty %}
+      <p class="text-muted text-center">No projects to display yet.</p>
+    {% endfor %}
+  </div>
+{% endblock %}
